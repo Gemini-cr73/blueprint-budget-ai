@@ -19,17 +19,23 @@ Blueprint Budget AI helps users design homes by combining budget constraints, la
 
 ## 🖼️ App Preview
 
-### 🧠 AI-Generated Home Plan
-![AI Home Plan](docs/screenshots/home-plan.png)
+### AI-Generated Home Plan
+![UI Dashboard](docs/screenshots/ui-dashboard.png)
 
-### 📊 Cost & Materials Breakdown
-![Cost Breakdown](docs/screenshots/cost-breakdown.png)
+### Cost & Materials Breakdown
+![Cost Breakdown](docs/screenshots/ui-dashboard.png)
 
-### 🏗️ Full Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
+### Full Dashboard
+![Dashboard](docs/screenshots/ui-dashboard.png)
 
-### ⚙️ API Documentation (Swagger)
+### API Documentation (Swagger)
 ![API Docs](docs/screenshots/api-docs.png)
+
+### Demo Walkthrough
+![Demo](docs/screenshots/demo.gif)
+
+### Production Architecture
+![Architecture](docs/screenshots/architecture.png)
 
 ## ✅ What This App Does
 
