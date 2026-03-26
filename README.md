@@ -8,8 +8,11 @@
   <img src="https://img.shields.io/badge/Containers-Docker-2496ED?style=for-the-badge&logo=docker" />
 </p>
 
-**AI-powered SmartBuild planner for budget-aware home design.**  
-Blueprint Budget AI helps users design homes by combining budget constraints, layout preferences, and AI-driven planning to generate floor layouts, cost estimates, and material breakdowns.
+## 🚀 AI-Powered SmartBuild Planner
+
+**Blueprint Budget AI is a full-stack AI-assisted home design platform that transforms user constraints (budget, layout, style) into structured floor plans, cost estimates, and material breakdowns — instantly.**
+
+It bridges **design + cost intelligence**, helping users move from idea → actionable plan in seconds.
 
 ## 🌐 Live Links (Production)
 
@@ -19,65 +22,69 @@ Blueprint Budget AI helps users design homes by combining budget constraints, la
 
 ## 🖼️ App Preview
 
-### AI-Generated Home Plan
+### 🧠 AI-Generated Home Plan
 ![UI Dashboard](docs/screenshots/ui-dashboard.png)
 
-### Cost & Materials Breakdown
-![Cost Breakdown](docs/screenshots/ui-dashboard.png)
-
-### Full Dashboard
-![Dashboard](docs/screenshots/ui-dashboard.png)
-
-### API Documentation (Swagger)
+### 📊 API Documentation (Swagger)
 ![API Docs](docs/screenshots/api-docs.png)
 
-### Demo Walkthrough
+### 🎬 Demo Walkthrough
 ![Demo](docs/screenshots/demo.gif)
 
-### Production Architecture
+### 🏗️ Production Architecture
 ![Architecture](docs/screenshots/architecture.png)
 
 ## ✅ What This App Does
 
-Blueprint Budget AI combines:
+Blueprint Budget AI enables:
 
-- **Budget-driven home planning**
-- **AI-generated floor layouts**
-- **Multi-floor design support**
-- **Material estimation and cost breakdown**
-- **Layout refinement suggestions**
-- **Reference image integration**
-- **Real-time frontend ↔ backend interaction**
+- 🏡 **Budget-driven home planning**
+- 🧠 **AI-generated floor layouts**
+- 🏢 **Multi-floor design support**
+- 💰 **Cost estimation + budget validation**
+- 📦 **Material breakdown generation**
+- 🖼️ **Reference image-guided design**
+- ⚡ **Real-time frontend ↔ backend interaction**
 
-## ✅ Features
+## 💡 Why This Project Is Different
 
-| Category | Feature | Description |
-|---|---|---|
-| Planning | Budget-based design | Generates home layouts based on user budget |
-| Planning | Multi-floor layouts | Supports 1+ floor configurations |
-| Visualization | Layout rendering | Displays structured floor plans dynamically |
-| Cost Analysis | Estimated build cost | Calculates total construction cost |
-| Cost Analysis | Material breakdown | Lists materials and associated costs |
-| Optimization | Budget fit analysis | Determines if design fits within budget |
-| UX | Reference image input | Allows users to guide design visually |
-| Platform | UI + API separation | Next.js frontend + FastAPI backend |
-| Deployment | Cloud-ready | Dockerized and deployed to Azure |
+Most home design tools focus only on **visual layout**.
+
+👉 Blueprint Budget AI combines:
+
+- **Design + Cost Intelligence**
+- **User constraints → structured outputs**
+- **Real-time decision feedback (within budget / over budget)**
+
+This makes it closer to a **decision-support system**, not just a design tool.
+
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|------|-----------|
+| Frontend | Next.js (App Router), TypeScript |
+| Backend | FastAPI (Python) |
+| Deployment | Azure App Service |
+| Containers | Docker |
+| Networking | Cloudflare (DNS + SSL) |
+| API | REST (JSON over HTTPS) |
 
 ## 🧠 Architecture
 
 ### Production
 
-- **Next.js UI (public):** `blueprint.ai-coach-lab.com`
-- **FastAPI API (public):** `api-blueprint.ai-coach-lab.com`
+- **Next.js UI:** `blueprint.ai-coach-lab.com`
+- **FastAPI API:** `api-blueprint.ai-coach-lab.com`
 - **Cloudflare:** DNS + routing
 - **Azure App Service:** Hosting + SSL
 
-### 🔧 System Flow
+## 🔧 System Flow
 
 ```mermaid
 flowchart LR
   U["User (Browser)"] --> UI["Next.js UI<br/>blueprint.ai-coach-lab.com"]
   UI -->|HTTPS JSON| API["FastAPI API<br/>api-blueprint.ai-coach-lab.com"]
+
   API --> ENGINE["Planning Engine"]
   API --> COST["Cost Estimator"]
   API --> MATERIALS["Materials Calculator"]
