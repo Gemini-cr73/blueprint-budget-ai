@@ -17,8 +17,9 @@ It bridges **design + cost intelligence**, helping users move from idea → acti
 ## 🌐 Live Links (Production)
 
 - **UI:** https://blueprint.ai-coach-lab.com  
+- **API:** https://api-blueprint.ai-coach-lab.com  
 - **API Docs (Swagger):** https://api-blueprint.ai-coach-lab.com/docs  
-- **Health Check:** https://api-blueprint.ai-coach-lab.com/health  
+- **Health Check:** https://api-blueprint.ai-coach-lab.com/health
 
 ## 🖼️ App Preview
 
