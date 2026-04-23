@@ -1,7 +1,4 @@
 {
     "name": "blueprint-budget-ai",
-    "private": true,
-    "workspaces": [
-        "frontend"
-    ]
+    "private": true
 }
