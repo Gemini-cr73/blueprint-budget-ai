@@ -619,8 +619,8 @@ export default function Home() {
   const displayedPlan = generatedPlan ?? livePlan;
 
   const activeFloor =
-    displayedPlan.floors_data.find((f) => f.floor === selectedFloorTab) ??
-    displayedPlan.floors_data[0];
+    displayedPlan?.floors_data?.find((f) => f.floor === selectedFloorTab) ??
+    displayedPlan?.floors_data?.[0];
 
   const resetGeneratedResult = () => {
     setGeneratedPlan(null);
@@ -938,7 +938,7 @@ export default function Home() {
                   ))}
                 </div>
 
-                {hasGenerated ? (
+                {hasGenerated && activeFloor ? (
                   <GeneratedPlan floorGroup={activeFloor} />
                 ) : (
                   <div className="rounded-[24px] border border-dashed border-slate-300 bg-white px-6 py-14 text-center">
