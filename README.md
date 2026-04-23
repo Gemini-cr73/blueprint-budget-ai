@@ -2,10 +2,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Cloud-Azure_App_Service-0078D4?style=for-the-badge&logo=microsoftazure" />
+  <img src="https://img.shields.io/badge/Frontend-Vercel-000000?style=for-the-badge&logo=vercel" />
+  <img src="https://img.shields.io/badge/Backend-Railway-0B0D0E?style=for-the-badge&logo=railway" />
   <img src="https://img.shields.io/badge/API-FastAPI-009688?style=for-the-badge&logo=fastapi" />
   <img src="https://img.shields.io/badge/UI-Next.js-000000?style=for-the-badge&logo=next.js" />
-  <img src="https://img.shields.io/badge/Containers-Docker-2496ED?style=for-the-badge&logo=docker" />
 </p>
 
 ## 🚀 AI-Powered SmartBuild Planner
@@ -16,10 +16,12 @@ It bridges **design + cost intelligence**, helping users move from idea → acti
 
 ## 🌐 Live Links (Production)
 
-- **UI:** https://blueprint.ai-coach-lab.com  
-- **API:** https://api-blueprint.ai-coach-lab.com  
-- **API Docs (Swagger):** https://api-blueprint.ai-coach-lab.com/docs  
-- **Health Check:** https://api-blueprint.ai-coach-lab.com/health
+- **UI (Vercel):** https://blueprint-budget-ai.vercel.app  
+- **API (Railway):** https://your-railway-api-url.up.railway.app  
+- **API Docs (Swagger):** https://your-railway-api-url.up.railway.app/docs  
+- **Health Check:** https://your-railway-api-url.up.railway.app/health  
+
+> ⚠️ Replace the Railway URL above once your backend is fully deployed.
 
 ## 🖼️ App Preview
 
@@ -65,26 +67,24 @@ This makes it closer to a **decision-support system**, not just a design tool.
 |------|-----------|
 | Frontend | Next.js (App Router), TypeScript |
 | Backend | FastAPI (Python) |
-| Deployment | Azure App Service |
-| Containers | Docker |
-| Networking | Cloudflare (DNS + SSL) |
+| Hosting (Frontend) | Vercel |
+| Hosting (Backend) | Railway |
 | API | REST (JSON over HTTPS) |
 
 ## 🧠 Architecture
 
 ### Production
 
-- **Next.js UI:** `blueprint.ai-coach-lab.com`
-- **FastAPI API:** `api-blueprint.ai-coach-lab.com`
-- **Cloudflare:** DNS + routing
-- **Azure App Service:** Hosting + SSL
+- **Next.js UI:** Vercel
+- **FastAPI API:** Railway
+- **Communication:** HTTPS REST API
 
 ## 🔧 System Flow
 
 ```mermaid
 flowchart LR
-  U["User (Browser)"] --> UI["Next.js UI<br/>blueprint.ai-coach-lab.com"]
-  UI -->|HTTPS JSON| API["FastAPI API<br/>api-blueprint.ai-coach-lab.com"]
+  U["User (Browser)"] --> UI["Next.js UI (Vercel)"]
+  UI -->|HTTPS JSON| API["FastAPI API (Railway)"]
 
   API --> ENGINE["Planning Engine"]
   API --> COST["Cost Estimator"]
