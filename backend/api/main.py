@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import Literal
 
@@ -26,12 +27,19 @@ else:
 # -----------------------------
 app = FastAPI(title="Blueprint Budget AI")
 
-allowed_origins = [
+default_allowed_origins = [
     "https://blueprint-frontend-fhf8h4bhdeegucv.eastus-01.azurewebsites.net",
     "https://blueprint.ai-coach-lab.com",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
+
+origins_env = os.getenv("ALLOWED_ORIGINS", "").strip()
+allowed_origins = (
+    [origin.strip() for origin in origins_env.split(",") if origin.strip()]
+    if origins_env
+    else default_allowed_origins
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -92,7 +100,7 @@ class HomeRequest(BaseModel):
 # Helpers
 # -----------------------------
 def get_selected_style(data: HomeRequest) -> StyleOption:
-    return data.selected_style or data.selectedStyle or "Modern"  # type: ignore[return-value]
+    return data.selected_style or data.selectedStyle or "Modern"
 
 
 def get_garage_cost(garage: str) -> int:
